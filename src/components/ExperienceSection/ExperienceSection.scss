@@ -1,21 +1,22 @@
-.ExperienceSection::before {
-  content: "Work 👨🏻‍💻";
-  text-align: center;
-  font-size: 30px;
-  padding: 20px;
-  width: 100%;
-}
-
 .ExperienceSection {
-  // border: 1px solid #333;
   box-shadow: 1px 1px 1px #333;
   text-align: center;
   padding: 50px 0;
 }
 
+.ExperienceSection::before {
+  content: "Work 👨🏻‍💻";
+  font-size: 30px;
+  padding: 20px;
+}
+
 .ExperienceWrapper {
-  flex-wrap: wrap;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   padding: 20px 0;
+}
+
+.ExperienceSeeMore {
+  padding: 0 20px;
 }

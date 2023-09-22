@@ -12,9 +12,9 @@ export function ExperienceSection({ experience }: Props) {
   return (
     <div className="ExperienceSection">
       <div className="ExperienceWrapper">
-        {experience.map((experienceInfo) => <ExperienceCard experience={experienceInfo} />)}
+        {experience.map((experienceInfo) => <ExperienceCard key={experienceInfo.company} experience={experienceInfo} />)}
       </div>
-      <p>Past work experience and other info can be found on my <a href="https://linkedin.com/in/thiagoloschi">Linkedin profile</a>.</p>
+      <p className="ExperienceSeeMore">Past work experience and other info can be found on my <a href="https://linkedin.com/in/thiagoloschi">Linkedin profile</a>.</p>
     </div>
   );
 } 
