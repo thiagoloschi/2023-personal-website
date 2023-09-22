@@ -1,13 +1,14 @@
 .ReferralCard {
-  height: 250px;
-  > p {
-    margin: 10px;
-  }
+  min-height: 250px;
+  width: 75%;
+  margin: auto;
 }
 
 .Message {
   position: relative;
+  margin: 10px;
   font-size: 18px;
+
 }
 
 .Message::before {  
