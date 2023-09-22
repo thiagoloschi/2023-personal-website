@@ -13,6 +13,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean ",
+    "prod": "gatsby clean && gatsby build && gatsby serve",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
