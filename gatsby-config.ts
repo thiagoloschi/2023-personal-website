@@ -65,7 +65,7 @@ const config: GatsbyConfig = {
         // Defaults to https://www.googletagmanager.com
         // origin: "https://thiagoloschi.com",
         // Delays processing pageview events on route update (in milliseconds)
-        delayOnRouteUpdate: 0,
+        // delayOnRouteUpdate: 0,
       },
     },
   },
