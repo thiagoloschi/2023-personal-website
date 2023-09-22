@@ -1,14 +1,17 @@
+.ContactSection {
+  font-size: 30px;
+}
+
 .ContactMap {
   display: flex;
   justify-content: space-between;
-  width: 50%;
+  max-width: 450px;
+
   margin: auto;
-  min-width: 350px;
+}
 
-
-  > a {
-    text-decoration: none;
-    font-size: 30px;
-    color: inherit;
-  }
+.ContactLink {
+  text-decoration: none;
+  color: inherit;
+  margin: 10px;
 }

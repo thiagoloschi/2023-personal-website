@@ -8,7 +8,7 @@ interface Props {
 
 export function ContactSection({contactInfo}: Props) {
   const contactInfoMap = contactInfo.map((info) => (
-    <a key={info.name} href={info.url}>
+    <a className="ContactLink" key={info.name} href={info.url}>
       <i className={`Icon fa-brands fa-${info.name}`} />
     </a>
   ));

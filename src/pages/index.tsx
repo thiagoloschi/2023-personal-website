@@ -4,6 +4,7 @@ import {
   AboutSection, 
   ContactSection, 
   ExperienceSection, 
+  Footer,
   ProfileCard,
   ReferralSection, 
 } from "../components";
@@ -33,10 +34,10 @@ const IndexPage: React.FC<PageProps> = (all) => {
       </AboutSection>
       <ExperienceSection experience={content.experience} />
       <ReferralSection referrals={content.referral} />
-      <div style={{display: 'flex', justifyContent: 'space-between', alignItems:'center', background: '#000', color: '#fff', padding: 30 }}>
+      <Footer>
         <p>® Handcrafted by me in 2023</p>
         <ContactSection contactInfo={content.contact} />
-      </div>
+      </Footer>
     </main>
   )
 }
