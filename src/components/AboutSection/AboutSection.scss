@@ -1,5 +1,5 @@
 .AboutSection {
-  padding: 80px 200px;
+  padding: 80px 0;
   color: #000;
   border-radius: 12px;
   font-size: 18px;
@@ -7,6 +7,8 @@
 }
 
 .Text {
+  width: 75%;
+  margin: auto;
   white-space: pre-line;
 }
 
