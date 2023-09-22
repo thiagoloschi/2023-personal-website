@@ -1,0 +1,19 @@
+.AboutSection {
+  padding: 80px 200px;
+  color: #000;
+  border-radius: 12px;
+  font-size: 18px;
+  background-color: #fafafa;
+}
+
+.Text {
+  white-space: pre-line;
+}
+
+.Text::before {
+  content: "👋🏻 Olá, Hello, Bonjour!";
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  padding:  0 20px 20px;
+}

@@ -1,0 +1,18 @@
+.ReferralSection::before {
+  content: "💬 Recommendations";
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  padding: 20px;
+}
+
+.ReferralSection {
+  padding: 80px 200px;
+  background-color: bisque;
+}
+
+.ReferralDots {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}

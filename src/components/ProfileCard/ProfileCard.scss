@@ -1,0 +1,31 @@
+.ProfileCard {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 0;
+	text-align: center;
+	width: 100%;
+	color: #fff;
+	background-image: url('https://media.licdn.com/dms/image/D4E16AQEYQ8yzhR2q-w/profile-displaybackgroundimage-shrink_350_1400/0/1689287015422?e=1700697600&v=beta&t=klU2pgXIkZ-dMTApa9rhm4-5qBsmxc7Go9hp-sMKXrw');
+	background-size: cover;
+}
+
+.Title {
+	text-align: center;
+	margin: 10px;
+	width: 100%;
+}
+
+.Name {
+	font-size: 60px;
+}
+
+.Role {
+	font-size: 30px;
+	margin: 10px 0;
+}
+
+.Location {
+	font-size: 17px;
+}

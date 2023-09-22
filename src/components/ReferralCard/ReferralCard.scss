@@ -1,0 +1,31 @@
+.ReferralCard {
+  height: 250px;
+  > p {
+    margin: 10px;
+  }
+}
+
+.Message {
+  position: relative;
+  font-size: 18px;
+}
+
+.Message::before {  
+  content: '“';
+  position: absolute;
+  left: -40px;
+  top: -47px;
+  font-size: 100px;
+}
+
+.Referrer {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.Relationship {
+  text-align: center;
+  font-style: italic;
+  font-weight: 200;
+}
