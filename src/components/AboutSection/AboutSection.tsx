@@ -8,10 +8,7 @@ interface Props {
 export function AboutSection({children}: Props) {
   return (
     <div className="AboutSection">
-      <p className="Text">{children}</p>
+      <div className="Text">{children}</div>
     </div>
   );
 }
-
-
-
