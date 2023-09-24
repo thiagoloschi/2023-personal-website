@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, KeyboardEventHandler, KeyboardEvent} from "react";
 import { type Referral } from "../../types";
 import { ReferralCard } from "../ReferralCard/ReferralCard";
 import "./ReferralSection.scss";
@@ -20,13 +20,25 @@ export function ReferralSection({referrals}: Props) {
 
   const referralDots = new Array(referrals.length).fill(null).map((_, index) => {
     const isSelected = index === selectedReferralIndex; 
-    const mark = isSelected ? '🗣️' : '🙋'
+    const dot = isSelected ? '🗣️' : '🙋'
+
+    const selectWithSpaceKey = ({code}: KeyboardEvent) => {
+      if(code !== 'Space') {
+        return null;
+      }
+
+      setSelectedReferralIndex(index);
+    }
+
     return (
       <div 
         className={`ReferralDot ${isSelected ? '' : 'DotHover'}`} 
         key={index} onClick={() => setSelectedReferralIndex(index)} 
-        title={`View recommendation ${index + 1}/${referrals.length}`}>
-          {mark}
+        title={`View recommendation ${index + 1}/${referrals.length}`}
+        tabIndex={0}
+        onKeyDown={selectWithSpaceKey}
+        >
+          {dot}
       </div>
     )
   })
