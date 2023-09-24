@@ -19,9 +19,15 @@ export function ReferralSection({referrals}: Props) {
   }, [selectedReferralIndex, setSelectedReferralIndex])
 
   const referralDots = new Array(referrals.length).fill(null).map((_, index) => {
-    const mark = index === selectedReferralIndex ? '🗣️' : '🙋'
+    const isSelected = index === selectedReferralIndex; 
+    const mark = isSelected ? '🗣️' : '🙋'
     return (
-      <div style={{margin: '0 10px 0 0', fontSize: 18}} key={index} onClick={() => setSelectedReferralIndex(index)}>{mark}</div>
+      <div 
+        className={`ReferralDot ${isSelected ? '' : 'DotHover'}`} 
+        key={index} onClick={() => setSelectedReferralIndex(index)} 
+        title={`View recommendation ${index + 1}/${referrals.length}`}>
+          {mark}
+      </div>
     )
   })
   

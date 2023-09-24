@@ -17,3 +17,12 @@
   justify-content: center;
   cursor: pointer;
 }
+
+.ReferralDot {
+  margin: 0 10px 0 0;
+  font-size: 20px;
+}
+
+.DotHover:hover {
+  transform: scale(-1, 1);
+}
