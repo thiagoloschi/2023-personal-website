@@ -1,4 +1,5 @@
 import React from "react";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 import {type ContactInfo} from "../../types";
 import "./ContactSection.scss"
 
@@ -8,9 +9,9 @@ interface Props {
 
 export function ContactSection({contactInfo}: Props) {
   const contactInfoMap = contactInfo.map((info) => (
-    <a className="ContactLink" key={info.name} href={info.url}>
+    <OutboundLink className="ContactLink" key={info.name} href={info.url} target="_blank" title={`Visit my ${info.name} profile`}>
       <i className={`Icon fa-brands fa-${info.name}`} />
-    </a>
+    </OutboundLink>
   ));
     
   return (
