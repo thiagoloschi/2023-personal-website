@@ -13,12 +13,12 @@ import {useProfileData} from '../utils/use-profile-data/use-profile-data'
 
 import "./global.scss";
 
-const IndexPage: React.FC<PageProps> = (all) => {
+const IndexPage: React.FC<PageProps> = () => {
   const {content} = useProfileData();
   
   return (
     <main>
-      <ProfileCover name={content.name} role={content.role} location={content.location} imageUrl={content.picture}/>
+      <ProfileCover name={content.name} role={content.role} location={content.location} avatarURL={content.picture} coverURL={content.cover} />
       <About>
         {content.about}
         <br/><br/>

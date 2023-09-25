@@ -9,6 +9,7 @@ export function useProfileData() {
         role
         location
     		picture
+        cover 
         about
         experience {
           year
