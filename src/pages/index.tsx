@@ -2,12 +2,12 @@ import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 
 import { 
-  AboutSection, 
-  ContactSection, 
-  ExperienceSection, 
+  About, 
+  Contact, 
+  Experience, 
   Footer,
-  ProfileCard,
-  ReferralSection, 
+  ProfileCover,
+  Recommendations, 
 } from "../components";
 import {useProfileData} from '../utils/use-profile-data/use-profile-data'
 
@@ -18,17 +18,17 @@ const IndexPage: React.FC<PageProps> = (all) => {
   
   return (
     <main>
-      <ProfileCard name={content.name} role={content.role} location={content.location} imageUrl={content.picture}/>
-      <AboutSection>
+      <ProfileCover name={content.name} role={content.role} location={content.location} imageUrl={content.picture}/>
+      <About>
         {content.about}
         <br/><br/>
-        <ContactSection contactInfo={content.contact} />
-      </AboutSection>
-      <ExperienceSection experience={content.experience} />
-      <ReferralSection referrals={content.referral} />
+        <Contact contactInfo={content.contact} />
+      </About>
+      <Experience experience={content.experience} />
+      <Recommendations referrals={content.referral} />
       <Footer>
         <p>® Handcrafted by me in 2023</p>
-        <ContactSection contactInfo={content.contact} />
+        <Contact contactInfo={content.contact} />
       </Footer>
     </main>
   )
