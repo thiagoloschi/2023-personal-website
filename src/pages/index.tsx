@@ -40,6 +40,7 @@ export const Head: HeadFC = () => {
   return (
     <>
       <title>Thiago Loschi</title>
+      <link rel="icon" href="https://images.ctfassets.net/vdhntq5p2umb/1euYsP42jKLkDF6wlZgf5V/f97ad1f7435f00de1170801c8ba709b7/favicon.png" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,600;1,9..40,100;1,9..40,400&family=Mooli&display=swap" rel="stylesheet" />

@@ -9,7 +9,8 @@ export function useProfileData() {
         role
         location
     		picture
-        cover 
+        cover
+        favicon
         about
         experience {
           year
