@@ -1,13 +1,13 @@
 import React, { ReactNode } from "react";
-import "./AboutSection.scss"
+import "./About.scss"
 
 interface Props {
   children: ReactNode;
 }
 
-export function AboutSection({children}: Props) {
+export function About({children}: Props) {
   return (
-    <div className="AboutSection">
+    <div className="About">
       <div className="Text">{children}</div>
     </div>
   );
