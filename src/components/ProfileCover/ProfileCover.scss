@@ -1,4 +1,4 @@
-.ProfileCard {
+.ProfileCover {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -28,4 +28,12 @@
 
 .Location {
 	font-size: 17px;
+}
+
+.ProfileImage {
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+  background-size: cover;
+  margin: auto;
 }

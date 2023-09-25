@@ -1,6 +1,5 @@
 import React from "react";
-import {ProfileImage} from "../../components";
-import "./ProfileCard.scss";
+import "./ProfileCover.scss";
 
 interface Props {
   imageUrl: string;
@@ -9,10 +8,10 @@ interface Props {
   role: string;
 }
 
-export function ProfileCard({imageUrl, name, location, role}: Props) {
+export function ProfileCover({imageUrl, name, location, role}: Props) {
   return (
-    <div className="ProfileCard">
-      <ProfileImage src={imageUrl} alt="profile picture" />
+    <div className="ProfileCover">
+      <div className="ProfileImage" style={{backgroundImage: `url(${imageUrl})`}} title="profile picture" />
       <div className="Title">
         <p className="Name">{name}</p>
         <p className="Role">{role}</p>
