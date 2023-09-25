@@ -1,10 +1,10 @@
-.ExperienceSection {
+.Experience {
   box-shadow: 1px 1px 1px #333;
   text-align: center;
   padding: 50px 0;
 }
 
-.ExperienceSection::before {
+.Experience::before {
   content: "Work 👨🏻‍💻";
   font-size: 30px;
   padding: 20px;

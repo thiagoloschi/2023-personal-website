@@ -1,6 +1,6 @@
 import React from "react";
 import "./ExperienceCard.scss";
-import { type Experience } from "../../types";
+import { type Experience } from "../../../../types";
 import { OutboundLink } from "gatsby-plugin-google-gtag";
 
 interface Props {
