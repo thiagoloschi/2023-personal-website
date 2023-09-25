@@ -1,13 +1,13 @@
 import React, {useState, useEffect, KeyboardEventHandler, KeyboardEvent} from "react";
-import { type Referral } from "../../types";
-import { ReferralCard } from "../ReferralCard/ReferralCard";
-import "./ReferralSection.scss";
+import { type Recommendation } from "../../types";
+import { ReferralCard } from "./components/ReferralCard/ReferralCard";
+import "./Recommendations.scss";
 
 interface Props {
-  referrals: Referral[];
+  referrals: Recommendation[];
 }
 
-export function ReferralSection({referrals}: Props) {
+export function Recommendations({referrals}: Props) {
   const [selectedReferralIndex, setSelectedReferralIndex] = useState(0);
 
   useEffect(() => {
@@ -50,7 +50,7 @@ export function ReferralSection({referrals}: Props) {
   }
   
   return (
-    <div className="ReferralSection">
+    <div className="Recommendations">
       <ReferralCard referral={referrals[selectedReferralIndex]} />
       <div className="ReferralDots">
         {referralDots}

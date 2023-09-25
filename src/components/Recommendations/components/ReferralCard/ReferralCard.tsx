@@ -1,9 +1,9 @@
 import React from "react";
-import {type Referral} from '../../types';
+import {type Recommendation} from '../../../../types';
 import "./ReferralCard.scss";
 
 interface Props {
-  referral: Referral;
+  referral: Recommendation;
 }
 
 export function ReferralCard({referral: {message, referrer, relationship}}: Props) {
