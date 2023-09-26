@@ -2,6 +2,7 @@ import React, {useState, useEffect, KeyboardEventHandler, KeyboardEvent} from "r
 import { type Recommendation } from "../../types";
 import { ReferralCard } from "./components/ReferralCard/ReferralCard";
 import "./Recommendations.scss";
+import { useAnalytics } from "../../utils/use-profile-data/use-analytics/use-analytics";
 
 interface Props {
   referrals: Recommendation[];
@@ -9,6 +10,7 @@ interface Props {
 
 export function Recommendations({referrals}: Props) {
   const [selectedReferralIndex, setSelectedReferralIndex] = useState(0);
+  const {logReferralScroll} = useAnalytics();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -17,6 +19,12 @@ export function Recommendations({referrals}: Props) {
 
     return () => clearTimeout(timer);
   }, [selectedReferralIndex, setSelectedReferralIndex])
+
+  const setSelectedReferralIndexWithAnalytics = (index: number) => {
+    setSelectedReferralIndex(index);
+    logReferralScroll(index + 1);
+  }
+  
 
   const referralDots = new Array(referrals.length).fill(null).map((_, index) => {
     const isSelected = index === selectedReferralIndex; 
@@ -27,15 +35,16 @@ export function Recommendations({referrals}: Props) {
         return null;
       }
 
-      setSelectedReferralIndex(index);
+      setSelectedReferralIndexWithAnalytics(index);
     }
 
     return (
       <div 
         className={`ReferralDot ${isSelected ? '' : 'DotHover'}`} 
-        key={index} onClick={() => setSelectedReferralIndex(index)} 
+        key={index}
         title={`View recommendation ${index + 1}/${referrals.length}`}
         tabIndex={0}
+        onClick={() => setSelectedReferralIndexWithAnalytics(index)} 
         onKeyDown={selectWithSpaceKey}
         >
           {dot}
@@ -46,7 +55,7 @@ export function Recommendations({referrals}: Props) {
   const handleReferralSelection = () => {
     const nextReferral = selectedReferralIndex + 1;
     const nextReferralIndex = nextReferral < referrals.length ? nextReferral : 0;
-    setSelectedReferralIndex(nextReferralIndex);    
+    setSelectedReferralIndexWithAnalytics(nextReferralIndex);    
   }
   
   return (
