@@ -25,15 +25,11 @@ export function useAnalytics() {
   }
 
   const logSocialMediaClick = (socialMedia: string) => {
-    if(socialMedia === 'linkedin') {
-      sendGoogleEvent("event", "click", { event_label: socialMedia });
-    } else {
-      sendGoogleEvent("event", "view_linkedin", { event_label: `view_${socialMedia}` });
-    }
+    sendGoogleEvent("event", `view_${socialMedia}`, { event_label: `view_${socialMedia}` });
   }
 
   const logReferralScroll = (referralIndex: number | string) => {
-    sendGoogleEvent("event", "click", { event_label: `view_referral_${referralIndex}` });
+    sendGoogleEvent("event", "view_referral", { event_label: `view_referral_${referralIndex}` });
   }
 
   return {
